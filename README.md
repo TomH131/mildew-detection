@@ -1,7 +1,7 @@
 ## Dataset Content
 
-- The dataset is sourced from [Kaggle](https://www.kaggle.com/codeinstitute/cherry-leaves). We then created a fictitious user story where predictive analytics can be applied in a real project in the workplace.
-- The dataset contains +4 thousand images taken from the client's crop fields. The images show healthy cherry leaves and cherry leaves that have powdery mildew, a fungal disease that affects many plant species. The cherry plantation crop is one of the finest products in their portfolio, and the company is concerned about supplying the market with a compromised quality product.
+ - The dataset is sourced from [Kaggle](https://www.kaggle.com/codeinstitute/cherry-leaves). We then created a fictitious user story where predictive analytics can be applied in a real project in the workplace.
+ - The dataset contains +4 thousand images taken from the client's crop fields. The images show healthy cherry leaves and cherry leaves that have powdery mildew, a fungal disease that affects many plant species. The cherry plantation crop is one of the finest products in their portfolio, and the company is concerned about supplying the market with a compromised quality product.
 
 ## Business Requirements
 
@@ -9,29 +9,62 @@ The cherry plantation crop from Farmy & Foods is facing a challenge where their 
 
 To save time in this process, the IT team suggested an ML system that detects instantly, using a leaf tree image, if it is healthy or has powdery mildew. A similar manual process is in place for other crops for detecting pests, and if this initiative is successful, there is a realistic chance to replicate this project for all other crops. The dataset is a collection of cherry leaf images provided by Farmy & Foods, taken from their crops.
 
-- 1 - The client is interested in conducting a study to visually differentiate a healthy cherry leaf from one with powdery mildew.
-- 2 - The client is interested in predicting if a cherry leaf is healthy or contains powdery mildew.
+ - 1 - The client is interested in conducting a study to visually differentiate a healthy cherry leaf from one with powdery mildew.
+ - 2 - The client is interested in predicting if a cherry leaf is healthy or contains powdery mildew.
 
 ## Hypothesis and how to validate?
 
-- List here your project hypothesis(es) and how you envision validating it (them).
+1. The IT team suggests that it may be possible to quickly differentiate between healthy cherry leaves and those affected by powdery mildew using a machine learning model. Implementing such a model could save employees thousands of hours currently spent inspecting each tree and applying specific treatments to infected leaves.
+
+2. With a large dataset of images containing both healthy and infected leaves, the model should have ample examples to learn from. Once deployed, the model is expected to make accurate predictions for future crops.
+
+ - Validation of these hypotheses will involve evaluating the model using graphical analysis and subsequent testing. This process will include assessing the model's accuracy and loss over epochs and concluding with an analysis via a confusion matrix.
+
+ - After validation, the client should be able to use images of future crops in conjunction with the model to accurately identify healthy leaves and those with powdery mildew. This will significantly reduce the time required for manual inspection and allow for targeted treatment of infected leaves.
 
 ## The rationale to map the business requirements to the Data Visualisations and ML tasks
 
-- List your business requirements and a rationale to map them to the Data Visualisations and ML tasks.
+1. Business Requirement 1: Data Visualization
+ - As a client I want to display the "mean" and "standard deviation" images for cherry leaves that are healthy and cherry leaves that contain powdery mildew, so that I can visually differentiate cherry leaves.
+ - As a client I want to display the difference between an average cherry leaf that if healthy and cherry leaf that contains powdery mildew, so that I can visually differentiate cherry leaves.
+ - As a client I want to display an image montage for cherry leaves that are healthy and cherry leaves that contain powdery mildew, so that I can  visually differentiate cherry leaves.
+
+2. Business Requirement 2: Classification
+ - As a client I want to predict if a given cherry leaf is healthy or contains powdery mildew.
+ - As a client I want to build a machine learning model and generate reports.
 
 ## ML Business Case
 
-- In the previous bullet, you potentially visualised an ML task to answer a business requirement. You should frame the business case using the method we covered in the course.
+We aim to develop a machine learning model capable of predicting whether a given cherry leaf is healthy or affected by powdery mildew, using a dataset provided by the client. The primary objective is to reduce the time employees spend identifying fungal infections in cherry trees. The success criterion for the model is achieving an accuracy of 97% or higher. The model will function as a binary classifier, providing predictions based on uploaded images.
+
+### Current Process and Challenges
+The current process involves manually inspecting each tree, which takes approximately 30 minutes per tree. Employees collect samples to visually verify whether the leaves are healthy or infected with powdery mildew. If a tree is found to be infected, a specific compound is applied to eliminate the fungus, a task that typically takes about a minute per tree. Given that the company manages thousands of trees across multiple farms nationwide, this process consumes thousands of hours and demands a more efficient solution.
+
+### Dataset and Privacy Measures
+The dataset provided contains over 4,000 images of leaves from the client’s crops, with an even distribution between healthy and infected leaves. This dataset has been preprocessed and divided into training, validation, and test sets for model development. The data was shared under a non-disclosure agreement (NDA) and is subject to strict privacy and protection measures to ensure compliance with confidentiality requirements.
 
 ## Dashboard Design
 
-- List all dashboard pages and their content, either blocks of information or widgets, like buttons, checkboxes, images, or any other items, that your dashboard library supports.
-- Finally, during the project development, you may revisit your dashboard plan to update a given feature (for example, at the beginning of the project, you were confident you would use a given plot to display an insight, but later, you chose another plot type).
+### Page 1: Project Summary
+ - This page will provide an overview of the dataset used and summarize the client's requirements.
+
+### Page 2: Project Findings
+ - This page will present our findings from the study, including visual representations of the differences between healthy cherry leaves and those affected by powdery mildew.
+
+### Page 3: Mildew Detector
+ - This page will include a link to download a set of cherry leaf images for live predictions.
+ - It will feature a widget that allows users to upload images, with support for multiple uploads at once. The uploaded images will be displayed alongside a prediction statement indicating whether each leaf is healthy or infected, along with the associated probability score.
+ - A table will also be included to list each image and its prediction results, along with a button to download the table and its data.
+
+### Page 4: Project Hypothesis
+ - This page will outline the project hypotheses and detail how they were validated during the course of the project.
+
+### Page 5: Model Performance
+ - This page will display the performance metrics of our model, including accuracy, loss over epochs, and other relevant evaluation results.
 
 ## Unfixed Bugs
 
-- You will need to mention unfixed bugs and why they were unfixed. This section should include shortcomings of the frameworks or technologies used. Although time can be a significant variable for consideration, paucity of time and difficulty understanding implementation is not a valid reason to leave bugs unfixed.
+- There are no unfixed bugs.
 
 ## Deployment
 
@@ -68,6 +101,3 @@ To save time in this process, the IT team suggested an ML system that detects in
 - The photos used on the home and sign-up page are from This Open-Source site.
 - The images used for the gallery page were taken from this other open-source site.
 
-## Acknowledgements (optional)
-
-- Thank the people who provided support throughout this project.
