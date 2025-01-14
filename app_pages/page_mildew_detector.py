@@ -18,13 +18,13 @@ def page_mildew_detector_body():
 
     st.write(
         f"* You can download a set of infected and healthy cherry leaves for live prediction. "
-        f"You can download the images from [here](https://www.kaggle.com/datasets/imdevskp/malaria-dataset)."
+        f"You can download the images from [here](https://www.kaggle.com/datasets/codeinstitute/cherry-leaves)."
         )
 
     st.write("---")
 
     images_buffer = st.file_uploader('Upload images of cherry leaves. You may select more than one.',
-                                        type='png',accept_multiple_files=True)
+                                        type='jpg',accept_multiple_files=True)
    
     if images_buffer is not None:
         df_report = pd.DataFrame([])

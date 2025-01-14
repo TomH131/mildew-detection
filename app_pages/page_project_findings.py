@@ -27,7 +27,7 @@ def page_project_findings_body():
         f"However, a small difference in the colour pigment of the average images is seen for both labels.")
 
       st.image(avg_healthy, caption='Healthy cherry leaf - Average and Variability')
-      st.image(avg_powdery_mildew, caption='Powdery mildew cherry leaf - Average and Variability')
+      st.image(avg_powdery_mildew, caption='Cherry leaf with powdery mildew- Average and Variability')
       st.write("---")
 
     if st.checkbox("Differences between average healthy and average infected leaf"):
