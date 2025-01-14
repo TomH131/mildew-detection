@@ -17,7 +17,7 @@ def page_mildew_detector_body():
         )
 
     st.write(
-        f"* You can download a set of infected and healthy cherry leaves for live prediction "
+        f"* You can download a set of infected and healthy cherry leaves for live prediction. "
         f"You can download the images from [here](https://www.kaggle.com/datasets/imdevskp/malaria-dataset)."
         )
 
