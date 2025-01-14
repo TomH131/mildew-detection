@@ -12,8 +12,8 @@ from src.machine_learning.predictive_analysis import (
 
 def page_mildew_detector_body():
     st.info(
-        f"* The client is interested in telling whether a given leaf is healthy or has "
-        f"a powdery mildew."
+        f"* The client is interested in predicting if a cherry leaf is healthy or "
+        f"contains powdery mildew."
         )
 
     st.write(
@@ -23,7 +23,7 @@ def page_mildew_detector_body():
 
     st.write("---")
 
-    images_buffer = st.file_uploader('Upload images of cherry leaves. You may select more than one.',
+    images_buffer = st.file_uploader('Upload images of cherry leaves. You may upload more than one.',
                                         type='jpg',accept_multiple_files=True)
    
     if images_buffer is not None:

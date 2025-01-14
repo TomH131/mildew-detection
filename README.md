@@ -14,11 +14,11 @@ To save time in this process, the IT team suggested an ML system that detects in
 
 ## Hypothesis and how to validate?
 
-1. The IT team suggests that it may be possible to quickly differentiate between healthy cherry leaves and those affected by powdery mildew using a machine learning model. Implementing such a model could save employees thousands of hours currently spent inspecting each tree and applying specific treatments to infected leaves.
+1. The IT team suggests that it may be possible to quickly differentiate between healthy cherry leaves and those affected by powdery mildew using a machine learning model. Implementing such a model could save employees thousands of hours currently spent inspecting each tree.
 
 2. With a large dataset of images containing both healthy and infected leaves, the model should have ample examples to learn from. Once deployed, the model is expected to make accurate predictions for future crops.
 
- - Validation of these hypotheses will involve evaluating the model using graphical analysis and subsequent testing. This process will include assessing the model's accuracy and loss over epochs and concluding with an analysis via a confusion matrix.
+ - Validation of these hypotheses will involve evaluating the model using graphical analysis and subsequent testing. This process will include assessing the model's accuracy and loss over epochs.
 
  - After validation, the client should be able to use images of future crops in conjunction with the model to accurately identify healthy leaves and those with powdery mildew. This will significantly reduce the time required for manual inspection and allow for targeted treatment of infected leaves.
 
@@ -26,12 +26,12 @@ To save time in this process, the IT team suggested an ML system that detects in
 
 1. Business Requirement 1: Data Visualization
  - As a client I want to display the "mean" and "standard deviation" images for cherry leaves that are healthy and cherry leaves that contain powdery mildew, so that I can visually differentiate cherry leaves.
- - As a client I want to display the difference between an average cherry leaf that if healthy and cherry leaf that contains powdery mildew, so that I can visually differentiate cherry leaves.
+ - As a client I want to display the difference between an average cherry leaf that is healthy and a cherry leaf that contains powdery mildew, so that I can visually differentiate cherry leaves.
  - As a client I want to display an image montage for cherry leaves that are healthy and cherry leaves that contain powdery mildew, so that I can  visually differentiate cherry leaves.
 
 2. Business Requirement 2: Classification
  - As a client I want to predict if a given cherry leaf is healthy or contains powdery mildew.
- - As a client I want to build a machine learning model and generate reports.
+ - As a client I want to upload multiple images and download the prediction results to action targeted treatments.
 
 ## ML Business Case
 
