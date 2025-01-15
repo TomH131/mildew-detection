@@ -1,2 +1,10 @@
-inputs/datasets/raw/cherry-leaves/*
+.vscode/
+*.pyc
+__pycache__/
+*.log
+.env
+inputs/datasets/*
 jupyter_notebooks/*
+outputs/
+.git/
+*.dockerfile
