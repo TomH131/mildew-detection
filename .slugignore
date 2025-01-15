@@ -4,6 +4,7 @@ __pycache__/
 *.log
 .env
 inputs/datasets/*
+outputs/datasets/*
 jupyter_notebooks/*
 .git/
 *.dockerfile
