@@ -70,7 +70,7 @@ The dataset provided contains over 4,000 images of leaves from the client’s cr
 
 ### Heroku
 
-- The App live link is: `https://YOUR_APP_NAME.herokuapp.com/`
+- The App live link is: `https://mildew-detector-th-0b3d38f46204.herokuapp.com/`
 - Set the runtime.txt Python version to a [Heroku-20](https://devcenter.heroku.com/articles/python-support#supported-runtimes) stack currently supported version.
 - The project was deployed to Heroku using the following steps.
 

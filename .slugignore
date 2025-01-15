@@ -5,6 +5,5 @@ __pycache__/
 .env
 inputs/datasets/*
 jupyter_notebooks/*
-outputs/
 .git/
 *.dockerfile
