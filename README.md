@@ -48,7 +48,7 @@ The dataset provided contains over 4,000 images of leaves from the client’s cr
 ### Page 1: Project Summary
  - This page will provide a summary of the project, the dataset and also the business requirements.
 
-### Page 2: Project Findings
+### Page 2: Study Findings
  - This page will present our findings from the study, including visual representations of the differences between healthy cherry leaves and those affected by powdery mildew. The different between the average and variability images will be shown as well as the difference between the average healthy and average infected leaf. There will also be an image montage for both sets of leaves.
 
 ### Page 3: Mildew Detector

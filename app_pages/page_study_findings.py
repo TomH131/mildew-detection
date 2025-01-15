@@ -9,7 +9,7 @@ from matplotlib.image import imread
 import itertools
 import random
 
-def page_project_findings_body():
+def page_study_findings_body():
     st.write("### Cherry Leaf Visualizer")
     st.info(
         f"* The client is interested in conducting a study to visually "
