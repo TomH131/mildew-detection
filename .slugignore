@@ -1,2 +1,2 @@
-inputs/datasets/raw/cherry-leaves
-jupyter_notebooks
+inputs/datasets/raw/cherry-leaves/*
+jupyter_notebooks/*
