@@ -14,9 +14,11 @@ To save time in this process, the IT team suggested an ML system that detects in
 
 ## Hypothesis and how to validate?
 
-1. The IT team suggests that it may be possible to quickly differentiate between healthy cherry leaves and those affected by powdery mildew using a machine learning model. Implementing such a model could save employees thousands of hours currently spent inspecting each tree.
+1. We hypothesise that the presence of visible white powdery marks on fungal-infected cherry leaves will enable a machine learning model to reliably distinguish between healthy and infected leaves.
 
-2. With a large dataset of images containing both healthy and infected leaves, the model should have ample examples to learn from. Once deployed, the model is expected to make accurate predictions for future crops.
+2. We hypothesise that we can reach the minimum accuracy of 97% set by the client. Although this is a high threshold, we believe that the model can meet or exceed this target using the dataset of four thousand images provided by the client.
+
+3. Currently, farm workers spend approximately 30 minutes per tree collecting samples to check for infection. We believe that a machine learning model can drastically reduce this time by instantly identifying whether a leaf is healthy or infected. Additionally, the option to upload and analyse multiple images simultaneously will further streamline the process.
 
  - Validation of these hypotheses will involve evaluating the model using graphical analysis and subsequent testing. This process will include assessing the model's accuracy and loss over epochs.
 
