@@ -10,12 +10,24 @@ def page_ml_performance_metrics():
 
     st.write("### Train, Validation and Test Set: Labels Frequencies")
 
+    st.info(
+        "Here, you can see that we split our image dataset into training, validation, and test "
+        "sets to train and evaluate our machine learning model."
+    )
+
     labels_distribution = plt.imread(f"outputs/{version}/labels_distribution.png")
     st.image(labels_distribution, caption='Labels Distribution on Train, Validation and Test Sets')
-    st.write("---")
+    st.write("---")   
 
 
     st.write("### Model History")
+
+    st.info(
+        "Here, you can observe how the model's accuracy on the training and validation sets "
+        "improved over time, as shown by the accuracy and val_accuracy graphs. Similarly, the "
+        "model's error rate decreased over time, as depicted by the loss and val_loss curves."
+    )
+
     col1, col2 = st.columns(2)
     with col1: 
         model_acc = plt.imread(f"outputs/{version}/model_training_acc.png")

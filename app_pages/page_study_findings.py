@@ -12,8 +12,8 @@ import random
 def page_study_findings_body():
     st.write("### Cherry Leaf Visualizer")
     st.info(
-        f"* The client is interested in conducting a study to visually "
-        f"differentiate a healthy cherry leaf from one with powdery mildew. ")
+        "The client is interested in conducting a study to visually "
+        "differentiate a healthy cherry leaf from one with powdery mildew.\n")
     
     version = 'v1'
     if st.checkbox("Difference between average and variability image"):
@@ -22,9 +22,9 @@ def page_study_findings_body():
       avg_powdery_mildew = plt.imread(f"outputs/{version}/avg_var_powdery_mildew.png")
 
       st.warning(
-        f"* We notice the average and variability images did not show "
-        f"patterns where we could intuitively differentiate one from another. " 
-        f"However, there is a small difference where the infected leaves have small white marks.")
+        "We notice the average and variability images did not show clear patterns "
+        "where we could intuitively differentiate one from another. However, " 
+        "there is a small difference where the infected leaves have small white marks.")
 
       st.image(avg_healthy, caption='Healthy cherry leaf - Average and Variability')
       st.image(avg_powdery_mildew, caption='Cherry leaf with powdery mildew- Average and Variability')
@@ -34,8 +34,8 @@ def page_study_findings_body():
           diff_between_avgs = plt.imread(f"outputs/{version}/avg_diff.png")
 
           st.warning(
-            f"* We notice this study didn't show "
-            f"patterns where we could intuitively differentiate one from another.")
+            "We notice this study didn't show patterns where "
+            "we could intuitively differentiate one from another.\n")
           st.image(diff_between_avgs, caption='Difference between average images')
 
     if st.checkbox("Image Montage"): 
@@ -65,9 +65,9 @@ def image_montage(dir_path, label_to_display, nrows, ncols, figsize=(15,10)):
       img_idx = random.sample(images_list, nrows * ncols)
     else:
       print(
-          f"Decrease nrows or ncols to create your montage. \n"
-          f"There are {len(images_list)} in your subset. "
-          f"You requested a montage with {nrows * ncols} spaces")
+          "Decrease nrows or ncols to create your montage. \n"
+          "There are {len(images_list)} in your subset. "
+          "You requested a montage with {nrows * ncols} spaces")
       return
     
 
@@ -94,4 +94,4 @@ def image_montage(dir_path, label_to_display, nrows, ncols, figsize=(15,10)):
 
   else:
     print("The label you selected doesn't exist.")
-    print(f"The existing options are: {labels}")
+    print("The existing options are: {labels}")
