@@ -24,7 +24,7 @@ To save time in this process, the IT team suggested an ML system that detects in
 
  - After validation, the client should be able to use images of future crops in conjunction with the model to accurately identify healthy leaves and those with powdery mildew. This will significantly reduce the time required for manual inspection and allow for targeted treatment of infected leaves.
 
-## The rationale to map the business requirements to the Data Visualisations and ML tasks
+## The rationale to map the business requirements to the Data Visualisations and ML tasks 
 
 1. Business Requirement 1: Data Visualization
  - As a client I want to display the "mean" and "standard deviation" images for cherry leaves that are healthy and cherry leaves that contain powdery mildew, so that I can visually differentiate cherry leaves.
