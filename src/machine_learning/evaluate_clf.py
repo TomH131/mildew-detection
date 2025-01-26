@@ -1,5 +1,6 @@
-import streamlit as st
-from src.data_management import load_pkl_file
+from src.data_management import load_pkl_file, download_model
+
+download_model()
 
 
 def load_test_evaluation(version):

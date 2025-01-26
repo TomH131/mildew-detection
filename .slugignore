@@ -11,3 +11,4 @@ jupyter_notebooks/
 node_modules/
 build/
 dist/
+outputs/v1/mildew_detector_model.keras
