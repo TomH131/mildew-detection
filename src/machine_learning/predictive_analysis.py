@@ -5,9 +5,6 @@ import plotly.express as px
 from tensorflow.keras.models import load_model
 from PIL import Image
 from src.data_management import load_pkl_file
-import requests
-import boto3
-import io
 
 
 def plot_predictions_probabilities(pred_proba, pred_class):
@@ -68,46 +65,3 @@ def load_model_and_predict(my_image, version):
         f"**{pred_class.lower()}**.")
 
     return pred_proba, pred_class
-
-
-model = None
-
-def load_model_from_s3(bucket_name, model_key):
-    global model
-    try:
-        if model is None:  # Check if the model is already loaded
-            # Initialize boto3 S3 client
-            s3_client = boto3.client('s3')
-            
-            # Download the model from the S3 bucket
-            model_obj = s3_client.get_object(Bucket=bucket_name, Key=model_key)
-            
-            # Read model file into memory and load the model
-            model_data = model_obj['Body'].read()
-            model = tf.keras.models.load_model(io.BytesIO(model_data))
-            
-            print("Model loaded successfully!")
-        
-        return model
-    except Exception as e:
-        st.error(f"Error loading model from S3: {e}")
-        return None
-
-
-def get_prediction(input_data):
-    try:
-        # Load model (Only needs to be done once)
-        model = load_model_from_s3('mildew-detection', 'mildew_detector_model.keras')
-        
-        if model is None:
-            return None
-        
-        # Ensure input_data is preprocessed before passing it to the model
-        # For example, if input_data is an image, ensure it’s resized, normalised, etc.
-        
-        prediction = model.predict(input_data)
-        
-        return prediction
-    except Exception as e:
-        st.error(f"Prediction Error: {e}")
-        return None
