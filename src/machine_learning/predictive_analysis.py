@@ -7,6 +7,11 @@ from PIL import Image
 from src.data_management import load_pkl_file
 
 
+def custom_input_layer_from_config(config):
+    config.pop("batch_shape", None)
+    return InputLayer.from_config(config)
+
+
 def plot_predictions_probabilities(pred_proba, pred_class):
     """
     Plot prediction probability results
